@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: postgres-15
+    restart: always
+    environment:
+      POSTGRES_DB: realestate
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init/schema.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - postgres_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d realestate"]
+      interval: 5s
+      timeout: 2s
+      retries: 20
+
+  backend:
+    build:
+      context: .               # Points to root directory
+      dockerfile: Dockerfile    # Uses the Dockerfile in root
+    container_name: realestate-backend
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "3000:3000"
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      DB_NAME: realestate
+      NODE_ENV: development
+    volumes:
+      - ./src:/app             # Maps local src to container /app
+      - /app/node_modules      # Preserves container modules
+    networks:
+      - postgres_network
+    restart: unless-stopped
+
+networks:
+  postgres_network:
+    driver: bridge
+
+volumes:
+  postgres_data:
