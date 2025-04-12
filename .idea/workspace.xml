@@ -5,16 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c165d6b3-d9b2-4eaf-84e8-fd62f80f2eb8" name="Changes" comment="Init front">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/62aa3135-536a-4eff-b821-80faae7310fc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/62aa3135-536a-4eff-b821-80faae7310fc/storage_v2/_src_/database/realestate.amYLqA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/62aa3135-536a-4eff-b821-80faae7310fc/storage_v2/_src_/database/realestate.amYLqA/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/62aa3135-536a-4eff-b821-80faae7310fc/storage_v2/_src_/database/realestate.amYLqA/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/62aa3135-536a-4eff-b821-80faae7310fc/storage_v2/_src_/database/realestate.amYLqA/schema/public.abK9xQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/465af931-eada-497c-a0a0-aaa7f8fb1717.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/465af931-eada-497c-a0a0-aaa7f8fb1717.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/465af931-eada-497c-a0a0-aaa7f8fb1717/storage_v2/_src_/database/realestate.amYLqA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/465af931-eada-497c-a0a0-aaa7f8fb1717/storage_v2/_src_/database/realestate.amYLqA/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile_frontend" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile_frontend" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/app/apartments/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/UI/app/apartments/[id]/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/lib/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/UI/lib/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/lib/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/UI/lib/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dist/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/dist/config/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/dist/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,33 +60,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Docker.docker-compose.yml.backend: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml.db: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml.postgres: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "js.last.introduce.type": "VAR",
-    "last_opened_file_path": "E:/Appartment System",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.General",
-    "ts.external.directory.path": "F:\\Apartment-system\\UI\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Docker.docker-compose.yml.backend: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.db: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.postgres: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;js.last.introduce.type&quot;: &quot;VAR&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Appartment System&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.General&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;F:\\Apartment-system\\UI\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\Appartment System" />
@@ -223,5 +225,71 @@
     <MESSAGE value="Init backend" />
     <MESSAGE value="Init front" />
     <option name="LAST_COMMIT_MESSAGE" value="Init front" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/UI/lib/api.ts</url>
+          <line>7</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/UI/lib/api.ts</url>
+          <line>16</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/UI/lib/api.ts</url>
+          <line>8</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/UI/lib/api.ts</url>
+          <line>9</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/UI/lib/api.ts</url>
+          <line>10</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/UI/lib/api.ts</url>
+          <line>11</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/UI/lib/api.ts</url>
+          <line>13</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/UI/lib/api.ts</url>
+          <line>12</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/UI/lib/api.ts</url>
+          <line>14</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/UI/lib/api.ts</url>
+          <line>15</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

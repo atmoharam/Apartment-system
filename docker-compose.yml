@@ -1,6 +1,28 @@
 version: '3.8'
 
 services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: realestate-app
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "3000:3000"  # Backend
+      - "3001:3001"  # Frontend
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      DB_NAME: realestate
+      NODE_ENV: development
+      NEXT_PUBLIC_API_URL: http://localhost:3000/api
+    networks:
+      - realestate_network
+
   postgres:
     image: postgres:15
     container_name: postgres-15
@@ -21,52 +43,6 @@ services:
       interval: 5s
       timeout: 2s
       retries: 20
-
-  backend:
-    build:
-      context: .
-      dockerfile: Dockerfile_backend
-    container_name: realestate-backend
-    depends_on:
-      postgres:
-        condition: service_healthy
-    ports:
-      - "3000:3000"
-    environment:
-      DB_HOST: postgres
-      DB_PORT: 5432
-      DB_USER: postgres
-      DB_PASSWORD: postgres
-      DB_NAME: realestate
-      NODE_ENV: development
-    volumes:
-      - ./src:/app
-      - /app/node_modules
-    networks:
-      - realestate_network
-    restart: unless-stopped
-    
-    
-  frontend:
-    build:
-      context: .
-      dockerfile: Dockerfile_frontend
-    container_name: realestate-frontend
-    ports:
-      - "3001:3001"
-    environment:
-      NEXT_PUBLIC_API_URL: http://localhost:3000/api  # For Docker-to-Docker communication
-      NEXT_PUBLIC_API_URL_LOCAL: http://localhost:3000/api  # For local development
-      PORT: 3001
-    volumes:
-      - ./UI:/app
-      - /app/node_modules
-      - /app/.next
-    networks:
-      - realestate_network
-    restart: unless-stopped
-    depends_on:
-      - backend
 
 networks:
   realestate_network:

@@ -8,7 +8,7 @@ export interface Apartment {
   roomsCount: number
   bathroomsCount: number
   size: number
-  photoUrls: string[]
+  photoUrls?: string[]
   streetName?: string
   buildingNumber?: string
   zipCode?: string
