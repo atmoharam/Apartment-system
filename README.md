@@ -65,7 +65,7 @@ Key principles implemented:
 - Postman (API testing)
 
 ## Database Schema <a name="database-schema"></a>
-![Database Schema](apartment.png)
+![Database Schema](./assets/apartment.png)
 
 Key Entities:
 - `Apartment` - Core property model
