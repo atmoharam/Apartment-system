@@ -52,9 +52,7 @@ Key principles implemented:
 ### Backend
 - Node.js 18
 - Express
-- TypeORM
 - PostgreSQL
-- JWT Authentication
 
 ### Infrastructure
 - Docker
