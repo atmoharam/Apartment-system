@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="realestate@localhost">
-  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.52">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.53">
     <root id="1">
       <DateStyle>mdy</DateStyle>
       <Grants>1||-9223372036854775808|c|G
@@ -4853,43 +4853,43 @@ apartment</Labels>
       <OwnerName>postgres</OwnerName>
     </object-type>
     <sequence id="265" parent="262" name="apartment_id_seq">
-      <DasType>integer|0s</DasType>
       <ObjectId>16441</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>732</StateNumber>
+      <StoredType>integer|0s</StoredType>
       <OwnerName>postgres</OwnerName>
     </sequence>
     <sequence id="266" parent="262" name="benefit_id_seq">
-      <DasType>integer|0s</DasType>
       <ObjectId>16432</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>731</StateNumber>
+      <StoredType>integer|0s</StoredType>
       <OwnerName>postgres</OwnerName>
     </sequence>
     <sequence id="267" parent="262" name="city_id_seq">
-      <DasType>integer|0s</DasType>
       <ObjectId>16399</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>728</StateNumber>
+      <StoredType>integer|0s</StoredType>
       <OwnerName>postgres</OwnerName>
     </sequence>
     <sequence id="268" parent="262" name="neighborhood_id_seq">
-      <DasType>integer|0s</DasType>
       <ObjectId>16408</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>729</StateNumber>
+      <StoredType>integer|0s</StoredType>
       <OwnerName>postgres</OwnerName>
     </sequence>
     <sequence id="269" parent="262" name="publisher_id_seq">
-      <DasType>integer|0s</DasType>
       <ObjectId>16422</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>730</StateNumber>
+      <StoredType>integer|0s</StoredType>
       <OwnerName>postgres</OwnerName>
     </sequence>
     <table id="270" parent="262" name="apartment">
@@ -4947,139 +4947,139 @@ apartment</Labels>
       <StateNumber>732</StateNumber>
     </check>
     <column id="279" parent="270" name="id">
-      <DasType>integer|0s</DasType>
       <DefaultExpression>nextval(&apos;apartment_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>732</StateNumber>
+      <StoredType>integer|0s</StoredType>
       <SequenceId>16441</SequenceId>
       <TypeId>23</TypeId>
     </column>
     <column id="280" parent="270" name="name">
-      <DasType>varchar(100)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>732</StateNumber>
+      <StoredType>varchar(100)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <column id="281" parent="270" name="owner_company">
-      <DasType>varchar(100)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>732</StateNumber>
+      <StoredType>varchar(100)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <column id="282" parent="270" name="status">
-      <DasType>apartment_status|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>732</StateNumber>
+      <StoredType>apartment_status|0s</StoredType>
       <TypeId>16386</TypeId>
     </column>
     <column id="283" parent="270" name="type">
-      <DasType>apartment_type|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>732</StateNumber>
+      <StoredType>apartment_type|0s</StoredType>
       <TypeId>16392</TypeId>
     </column>
     <column id="284" parent="270" name="price">
-      <DasType>numeric(12,2 digit)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StateNumber>732</StateNumber>
+      <StoredType>numeric(12,2 digit)|0s</StoredType>
       <TypeId>1700</TypeId>
     </column>
     <column id="285" parent="270" name="rooms_count">
-      <DasType>integer|0s</DasType>
       <Position>7</Position>
       <StateNumber>732</StateNumber>
+      <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
     <column id="286" parent="270" name="bathrooms_count">
-      <DasType>integer|0s</DasType>
       <Position>8</Position>
       <StateNumber>732</StateNumber>
+      <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
     <column id="287" parent="270" name="size">
-      <DasType>double precision|0s</DasType>
       <Position>9</Position>
       <StateNumber>732</StateNumber>
+      <StoredType>double precision|0s</StoredType>
       <TypeId>701</TypeId>
     </column>
     <column id="288" parent="270" name="photo_urls">
-      <DasType>text[]|0s</DasType>
       <Position>10</Position>
       <StateNumber>732</StateNumber>
+      <StoredType>text[]|0s</StoredType>
       <TypeId>1009</TypeId>
     </column>
     <column id="289" parent="270" name="street_name">
-      <DasType>varchar(100)|0s</DasType>
       <Position>11</Position>
       <StateNumber>732</StateNumber>
+      <StoredType>varchar(100)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <column id="290" parent="270" name="building_number">
-      <DasType>varchar(20)|0s</DasType>
       <Position>12</Position>
       <StateNumber>732</StateNumber>
+      <StoredType>varchar(20)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <column id="291" parent="270" name="zip_code">
-      <DasType>varchar(20)|0s</DasType>
       <Position>13</Position>
       <StateNumber>732</StateNumber>
+      <StoredType>varchar(20)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <column id="292" parent="270" name="latitude">
-      <DasType>double precision|0s</DasType>
       <Position>14</Position>
       <StateNumber>732</StateNumber>
+      <StoredType>double precision|0s</StoredType>
       <TypeId>701</TypeId>
     </column>
     <column id="293" parent="270" name="longitude">
-      <DasType>double precision|0s</DasType>
       <Position>15</Position>
       <StateNumber>732</StateNumber>
+      <StoredType>double precision|0s</StoredType>
       <TypeId>701</TypeId>
     </column>
     <column id="294" parent="270" name="header_description">
-      <DasType>text|0s</DasType>
       <Position>16</Position>
       <StateNumber>732</StateNumber>
+      <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
     <column id="295" parent="270" name="description">
-      <DasType>text|0s</DasType>
       <Position>17</Position>
       <StateNumber>732</StateNumber>
+      <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
     <column id="296" parent="270" name="publisher_id">
-      <DasType>integer|0s</DasType>
       <Position>18</Position>
       <StateNumber>732</StateNumber>
+      <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
     <column id="297" parent="270" name="city_id">
-      <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>19</Position>
       <StateNumber>732</StateNumber>
+      <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
     <column id="298" parent="270" name="neighborhood_id">
-      <DasType>integer|0s</DasType>
       <Position>20</Position>
       <StateNumber>732</StateNumber>
+      <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
     <column id="299" parent="270" name="created_at">
-      <DasType>timestamp|0s</DasType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <Position>21</Position>
       <StateNumber>732</StateNumber>
+      <StoredType>timestamp|0s</StoredType>
       <TypeId>1114</TypeId>
     </column>
     <foreign-key id="300" parent="270" name="apartment_publisher_id_fkey">
@@ -5154,17 +5154,17 @@ apartment</Labels>
       <UnderlyingIndexId>16452</UnderlyingIndexId>
     </key>
     <column id="310" parent="271" name="apartment_id">
-      <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>733</StateNumber>
+      <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
     <column id="311" parent="271" name="benefit_id">
-      <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>733</StateNumber>
+      <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
     <foreign-key id="312" parent="271" name="apartment_benefit_apartment_id_fkey">
@@ -5209,19 +5209,19 @@ benefit_id</ColNames>
       <UnderlyingIndexId>16472</UnderlyingIndexId>
     </key>
     <column id="317" parent="272" name="id">
-      <DasType>integer|0s</DasType>
       <DefaultExpression>nextval(&apos;benefit_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>731</StateNumber>
+      <StoredType>integer|0s</StoredType>
       <SequenceId>16432</SequenceId>
       <TypeId>23</TypeId>
     </column>
     <column id="318" parent="272" name="name">
-      <DasType>varchar(50)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>731</StateNumber>
+      <StoredType>varchar(50)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <index id="319" parent="272" name="benefit_pkey">
@@ -5258,19 +5258,19 @@ benefit_id</ColNames>
       <UnderlyingIndexId>16439</UnderlyingIndexId>
     </key>
     <column id="323" parent="273" name="id">
-      <DasType>integer|0s</DasType>
       <DefaultExpression>nextval(&apos;city_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>728</StateNumber>
+      <StoredType>integer|0s</StoredType>
       <SequenceId>16399</SequenceId>
       <TypeId>23</TypeId>
     </column>
     <column id="324" parent="273" name="name">
-      <DasType>varchar(100)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>728</StateNumber>
+      <StoredType>varchar(100)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <index id="325" parent="273" name="city_pkey">
@@ -5307,25 +5307,25 @@ benefit_id</ColNames>
       <UnderlyingIndexId>16406</UnderlyingIndexId>
     </key>
     <column id="329" parent="274" name="id">
-      <DasType>integer|0s</DasType>
       <DefaultExpression>nextval(&apos;neighborhood_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>729</StateNumber>
+      <StoredType>integer|0s</StoredType>
       <SequenceId>16408</SequenceId>
       <TypeId>23</TypeId>
     </column>
     <column id="330" parent="274" name="name">
-      <DasType>varchar(100)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>729</StateNumber>
+      <StoredType>varchar(100)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <column id="331" parent="274" name="city_id">
-      <DasType>integer|0s</DasType>
       <Position>3</Position>
       <StateNumber>729</StateNumber>
+      <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
     <foreign-key id="332" parent="274" name="neighborhood_city_id_fkey">
@@ -5372,39 +5372,39 @@ city_id</ColNames>
       <UnderlyingIndexId>16415</UnderlyingIndexId>
     </key>
     <column id="337" parent="275" name="id">
-      <DasType>integer|0s</DasType>
       <DefaultExpression>nextval(&apos;publisher_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>730</StateNumber>
+      <StoredType>integer|0s</StoredType>
       <SequenceId>16422</SequenceId>
       <TypeId>23</TypeId>
     </column>
     <column id="338" parent="275" name="name">
-      <DasType>varchar(100)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>730</StateNumber>
+      <StoredType>varchar(100)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <column id="339" parent="275" name="email">
-      <DasType>varchar(100)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>730</StateNumber>
+      <StoredType>varchar(100)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <column id="340" parent="275" name="phone_number">
-      <DasType>varchar(20)|0s</DasType>
       <Position>4</Position>
       <StateNumber>730</StateNumber>
+      <StoredType>varchar(20)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <column id="341" parent="275" name="created_at">
-      <DasType>timestamp|0s</DasType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <Position>5</Position>
       <StateNumber>730</StateNumber>
+      <StoredType>timestamp|0s</StoredType>
       <TypeId>1114</TypeId>
     </column>
     <index id="342" parent="275" name="publisher_pkey">

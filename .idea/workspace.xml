@@ -5,13 +5,66 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c165d6b3-d9b2-4eaf-84e8-fd62f80f2eb8" name="Changes" comment="upload assets">
+      <change afterPath="$PROJECT_DIR$/src/application/use-cases/benefits/GetAllBenefitsUseCase.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/use-cases/benefits/GetBenefitByIdUseCase.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/use-cases/city/FindAllCitiesUseCase.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/use-cases/city/FindCityByIdUseCase.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/use-cases/neighborhoods/CreateNeighborhoodUseCase.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/use-cases/neighborhoods/DeleteNeighborhoodUseCase.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/use-cases/neighborhoods/GetAllNeighborhoodsUseCase.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/use-cases/neighborhoods/GetNeighborhoodByIdUseCase.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/use-cases/neighborhoods/UpdateNeighborhoodUseCase.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/use-cases/publisher/CreatePublisherUseCase.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/use-cases/publisher/GetAllPublishersUseCase.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/use-cases/publisher/GetPublisherByIdUseCase.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/use-cases/publisher/UpdatePublisherUseCase.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/controllers/BenefitController.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/controllers/CityController.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/controllers/PublisherController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/465af931-eada-497c-a0a0-aaa7f8fb1717.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/465af931-eada-497c-a0a0-aaa7f8fb1717.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_11_2025_10_27_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_11_2025_10_27_PM__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_12_2025_9_42_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_12_2025_9_42_PM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/1.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Home.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/2.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Add new apartment 1.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/3.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Add new apartment 2.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/4.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Add new apartment 3.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/5.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Add new apartment 4.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/6.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/assets/apartment details.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/init/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/init/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/use-cases/apartment/CreateApartmentUseCase.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/use-cases/apartment/CreateApartmentUseCase.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dist/application/use-cases/apartment/CreateApartmentUseCase.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dist/application/use-cases/apartment/DeleteApartmentUseCase.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dist/application/use-cases/apartment/GetApartmentByIdUseCase.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dist/application/use-cases/apartment/GetApartmentsUseCase.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dist/application/use-cases/apartment/UpdateApartmentUseCase.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dist/config/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dist/domain/entities/Apartment.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dist/domain/entities/Benefit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dist/domain/entities/City.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dist/domain/entities/Neighborhood.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dist/domain/entities/Publisher.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dist/domain/repositories/ApartmentRepository.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dist/domain/repositories/BenefitRepository.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dist/domain/repositories/CityRepository.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dist/domain/repositories/NeighborhoodRepository.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dist/domain/repositories/PublisherRepository.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dist/frameworks/database/postgres/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dist/frameworks/database/postgres/repositories/PostgresApartmentRepository.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dist/frameworks/database/postgres/repositories/PostgresBenefitRepository.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dist/frameworks/database/postgres/repositories/PostgresCityRepository.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dist/frameworks/database/postgres/repositories/PostgresNeighborhoodRepository.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dist/frameworks/database/postgres/repositories/PostgresPublisherRepository.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dist/interfaces/controllers/ApartmentController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dist/interfaces/routes/apartmentRoutes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dist/interfaces/routes/benefitRoutes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dist/interfaces/routes/cityRoutes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dist/interfaces/routes/neighborhoodRoutes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dist/interfaces/routes/publisherRoutes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaces/controllers/ApartmentController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/controllers/ApartmentController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaces/routes/apartmentRoutes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/routes/apartmentRoutes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaces/routes/benefitRoutes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/routes/benefitRoutes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaces/routes/cityRoutes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/routes/cityRoutes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaces/routes/neighborhoodRoutes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/routes/neighborhoodRoutes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaces/routes/publisherRoutes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/routes/publisherRoutes.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +75,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Dockerfile" />
+        <option value="tsconfig.json" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -49,40 +104,42 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2va8obt24cGsPt6iEzX8uSxMd9l" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Docker.docker-compose.yml.backend: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yml.db: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yml.postgres: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;js.last.introduce.type&quot;: &quot;VAR&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/Apartment-system/assets&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.General&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;F:\\Apartment-system\\UI\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Docker.docker-compose.yml.backend: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.db: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.postgres: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "js.last.introduce.type": "VAR",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "F:/Apartment-system/assets",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.General",
+    "ts.external.directory.path": "F:\\Apartment-system\\src\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\Apartment-system\assets" />
@@ -162,7 +219,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.19416.2" />
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-WS-251.23774.424" />
       </set>
     </attachedChunks>
   </component>
@@ -187,6 +244,8 @@
       <workItem from="1744411425627" duration="107000" />
       <workItem from="1744412534973" duration="14155000" />
       <workItem from="1744465903627" duration="5303000" />
+      <workItem from="1745234797752" duration="486000" />
+      <workItem from="1745235582057" duration="10451000" />
     </task>
     <task id="LOCAL-00001" summary="Init front">
       <option name="closed" value="true" />
@@ -264,55 +323,46 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/UI/lib/api.ts</url>
           <line>6</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/UI/lib/api.ts</url>
           <line>14</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/UI/lib/api.ts</url>
           <line>7</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/UI/lib/api.ts</url>
           <line>8</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/UI/lib/api.ts</url>
           <line>9</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/UI/lib/api.ts</url>
           <line>10</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/UI/lib/api.ts</url>
           <line>11</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/UI/lib/api.ts</url>
           <line>12</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/UI/lib/api.ts</url>
           <line>13</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>

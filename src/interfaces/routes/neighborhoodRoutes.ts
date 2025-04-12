@@ -1,42 +1,20 @@
 import express from "express"
-import type { Request, Response } from "express"
-import { PostgresNeighborhoodRepository } from "../../frameworks/database/postgres/repositories/PostgresNeighborhoodRepository"
+import type {Request, Response} from "express"
+import {
+    PostgresNeighborhoodRepository
+} from "../../frameworks/database/postgres/repositories/PostgresNeighborhoodRepository"
+import {NeighborhoodController} from "../controllers/NeighborhoodController"
 
 const router = express.Router()
 const neighborhoodRepository = new PostgresNeighborhoodRepository()
+const neighborhoodController = new NeighborhoodController(neighborhoodRepository)
 
-router.get("/", async (req: Request, res: Response) => {
-  try {
-    const cityId = req.query.cityId ? Number(req.query.cityId) : undefined
-    const neighborhoods = await neighborhoodRepository.findAll(cityId)
-    res.status(200).json(neighborhoods)
-  } catch (error) {
-    console.error("Error getting neighborhoods:", error)
-    res.status(500).json({ message: "Internal server error" })
-  }
-})
+router.get("/", ( req, res ) => neighborhoodController.getAllNeighborhoods(req, res))
+router.get("/:id", ( req, res ) => neighborhoodController.getNeighborhoodById(req, res))
+router.post("/", ( req, res ) => neighborhoodController.createNeighborhood(req, res))
+router.put("/:id", ( req, res ) => neighborhoodController.updateNeighborhood(req, res))
+router.delete("/:id", ( req, res ) => neighborhoodController.deleteNeighborhood(req, res))
 
-router.get("/:id", async (req: Request, res: Response) => {
-  try {
-    const id = Number(req.params.id)
 
-    if (isNaN(id)) {
-      res.status(400).json({ message: "Invalid neighborhood ID" })
-      return
-    }
 
-    const neighborhood = await neighborhoodRepository.findById(id)
-
-    if (!neighborhood) {
-      res.status(404).json({ message: "Neighborhood not found" })
-      return
-    }
-
-    res.status(200).json(neighborhood)
-  } catch (error) {
-    console.error("Error getting neighborhood by ID:", error)
-    res.status(500).json({ message: "Internal server error" })
-  }
-})
-
-export { router as neighborhoodRoutes }
+export {router as neighborhoodRoutes}
