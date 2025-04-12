@@ -9,7 +9,8 @@
 4. [Technologies](#technologies)
 5. [Database Schema](#database-schema)
 6. [API Documentation](#api-documentation)
-7. [Installation](#installation)
+7. [Screenshots](#screen-shots)
+8. [Installation](#installation)
 
 ## Overview <a name="overview"></a>
 A modern apartment listings platform built with Clean Architecture principles, featuring:
@@ -69,6 +70,14 @@ Key Entities:
 ## API Documentation <a name="api-documentation"></a>
 Complete Postman documentation:  
 [View API Docs](https://documenter.getpostman.com/view/22778824/2sB2cYdLpw)
+
+## Screen Shots <a name="screen-shots"></a>
+![Home page](./assets/1.png)
+![New Apartment form](./assets/2.png)
+![New Apartment form](./assets/3.png)
+![New Apartment form](./assets/4.png)
+![New Apartment form](./assets/5.png)
+![Apartment Details](./assets/6.png)
 
 ## Installation <a name="installation"></a>
 ```bash
