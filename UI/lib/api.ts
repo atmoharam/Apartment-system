@@ -10,9 +10,8 @@ async function fetchAPI<T>(endpoint: string, options?: RequestInit): Promise<T> 
     },
     ...options,
   })
-
   if (!response.ok) {
-    throw new Error(`API request failed: ${response.statusText}`)
+    throw new Error(`API request failed: ${response.json()}`)
   }
 
   return response.json()
@@ -34,27 +33,23 @@ export async function getAllApartments(filters?: Record<string, any>): Promise<A
       url += `?${params.toString()}`
     }
   }
-
   const apartments = await fetchAPI<Apartment[]>(url)
-
-  // Fetch additional data for each apartment
   const enhancedApartments = await Promise.all(
       apartments.map(async (apartment) => {
         try {
           // Get city name
-          if (apartment.cityId) {
+          if (apartment.cityId && !apartment.cityName) {
             const city = await getCityById(apartment.cityId)
             apartment.cityName = city.name
           }
 
-          // Get neighborhood name
-          if (apartment.neighborhoodId) {
+          if (apartment.neighborhoodId && !apartment.neighborhoodName) {
             const neighborhood = await getNeighborhoodById(apartment.neighborhoodId)
             apartment.neighborhoodName = neighborhood.name
           }
 
           // Get benefit names
-          if (apartment.benefits && apartment.benefits.length > 0) {
+          if (apartment.benefits && apartment.benefits.length > 0 && !apartment.benefitNames) {
             const benefitNames = await Promise.all(
                 apartment.benefits.map(async (benefitId) => {
                   const benefit = await getBenefitById(benefitId)
@@ -81,19 +76,20 @@ export async function getApartmentById(id: number): Promise<Apartment | null> {
     const apartment = await fetchAPI<Apartment>(`/apartments/${id}`)
 
     // Get city name
-    if (apartment.cityId) {
+    if (apartment.cityId && apartment.cityName == null) {
       const city = await getCityById(apartment.cityId)
       apartment.cityName = city.name
     }
 
     // Get neighborhood name
-    if (apartment.neighborhoodId) {
+    if (apartment.neighborhoodId && apartment.neighborhoodName == null) {
       const neighborhood = await getNeighborhoodById(apartment.neighborhoodId)
       apartment.neighborhoodName = neighborhood.name
     }
 
     // Get benefit names
-    if (apartment.benefits && apartment.benefits.length > 0) {
+    if (apartment.benefits && apartment.benefits.length > 0
+        && apartment.benefitNames == null) {
       const benefitNames = await Promise.all(
           apartment.benefits.map(async (benefitId) => {
             const benefit = await getBenefitById(benefitId)
