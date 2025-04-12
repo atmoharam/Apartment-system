@@ -73,7 +73,7 @@ Complete Postman documentation:
 
 ## Screen Shots <a name="screen-shots"></a>
 ![Home page](./assets/1.png)
-![New Apartment form](./assets/2.png)
+![New Apartment form](./assets/Home.png)
 ![New Apartment form](./assets/3.png)
 ![New Apartment form](./assets/4.png)
 ![New Apartment form](./assets/5.png)
