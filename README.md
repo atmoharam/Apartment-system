@@ -10,13 +10,6 @@
 5. [Database Schema](#database-schema)
 6. [API Documentation](#api-documentation)
 7. [Installation](#installation)
-8. [Configuration](#configuration)
-9. [Running the Application](#running-the-application)
-10. [Development](#development)
-11. [Testing](#testing)
-12. [Deployment](#deployment)
-13. [Contributing](#contributing)
-14. [License](#license)
 
 ## Overview <a name="overview"></a>
 A modern apartment listings platform built with Clean Architecture principles, featuring:
