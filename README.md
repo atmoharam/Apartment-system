@@ -73,10 +73,10 @@ Complete Postman documentation:
 
 ## Screen Shots <a name="screen-shots"></a>
 ![UI of Home](./assets/Home.PNG)
-![UI of Adding Apartment](./assets/Add-new apartment-1.PNG)
-![UI of Adding Apartment](./assets/Add-new apartment-2.PNG)
-![UI of Adding Apartment](./assets/Add-new apartment-3.PNG)
-![UI of Adding Apartment](./assets/Add-new apartment-4.PNG)
+![UI of Adding Apartment](./assets/Add-new-apartment-1.PNG)
+![UI of Adding Apartment](./assets/Add-new-apartment-2.PNG)
+![UI of Adding Apartment](./assets/Add-new-apartment-3.PNG)
+![UI of Adding Apartment](./assets/Add-new-apartment-4.PNG)
 ![UI of Apartment Details](./assets/apartment-details.PNG)
 ## Installation <a name="installation"></a>
 ```bash
