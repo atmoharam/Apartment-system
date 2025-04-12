@@ -72,12 +72,7 @@ Complete Postman documentation:
 [View API Docs](https://documenter.getpostman.com/view/22778824/2sB2cYdLpw)
 
 ## Screen Shots <a name="screen-shots"></a>
-(./assets/1.png)
-(./assets/Home.png)
-![New Apartment form](./assets/3.png)
-![New Apartment form](./assets/4.png)
-![New Apartment form](./assets/5.png)
-![Apartment Details](./assets/6.png)
+![UI of Home](./assets/Home.png)
 
 ## Installation <a name="installation"></a>
 ```bash
