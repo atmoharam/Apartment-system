@@ -6,6 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="c165d6b3-d9b2-4eaf-84e8-fd62f80f2eb8" name="Changes" comment="upload assets">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/1.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Home.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/2.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Add new apartment 1.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/3.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Add new apartment 2.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/4.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Add new apartment 3.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/5.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Add new apartment 4.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/6.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/assets/apartment details.PNG" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,7 +220,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744486905449</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="upload assets">
+      <option name="closed" value="true" />
+      <created>1744488136434</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1744488136434</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
