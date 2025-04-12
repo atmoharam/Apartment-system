@@ -4,14 +4,12 @@ const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000/a
 
 // Helper function for API requests
 async function fetchAPI<T>(endpoint: string, options?: RequestInit): Promise<T> {
-  await console.log("From fetchAPI fetching from : " , `${API_BASE_URL}${endpoint}`)
    let response = await fetch(`${API_BASE_URL}${endpoint}`, {
     headers: {
       "Content-Type": "application/json",
     },
     ...options,
   })
-  await console.log("From fetchAPI fetching response : " , response)
   if (!response.ok) {
     throw new Error(`API request failed: ${response.json()}`)
   }
@@ -75,9 +73,7 @@ export async function getAllApartments(filters?: Record<string, any>): Promise<A
 // Get apartment by ID
 export async function getApartmentById(id: Number): Promise<Apartment | null> {
   try {
-    await console.log("From getApartmentById function : " , id)
     const apartment = await fetchAPI<Apartment>(`/apartments/${id}`)
-    await console.log("From getApartmentById function : " , apartment)
     // Get city name
     if (apartment.cityId && apartment.cityName == null) {
       const city = await getCityById(apartment.cityId)
@@ -89,19 +85,6 @@ export async function getApartmentById(id: Number): Promise<Apartment | null> {
       const neighborhood = await getNeighborhoodById(apartment.neighborhoodId)
       apartment.neighborhoodName = neighborhood.name
     }
-
-    // Get benefit names
-    // if (apartment.benefits && apartment.benefits.length > 0
-    //     && apartment.benefitNames == null) {
-    //   const benefitNames = await Promise.all(
-    //       apartment.benefits.map(async (benefitId) => {
-    //         const benefit = await getBenefitById(benefitId)
-    //         return benefit.name
-    //       }),
-    //   )
-    //   apartment.benefitNames = benefitNames
-    // }
-
     return apartment
   } catch (error) {
     console.error(`Error fetching apartment ${id}:`, error)

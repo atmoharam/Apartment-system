@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c165d6b3-d9b2-4eaf-84e8-fd62f80f2eb8" name="Changes" comment="Init front">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/465af931-eada-497c-a0a0-aaa7f8fb1717.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/465af931-eada-497c-a0a0-aaa7f8fb1717.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/465af931-eada-497c-a0a0-aaa7f8fb1717/storage_v2/_src_/database/realestate.amYLqA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/465af931-eada-497c-a0a0-aaa7f8fb1717/storage_v2/_src_/database/realestate.amYLqA/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile_frontend" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile_frontend" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/app/apartments/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/UI/app/apartments/[id]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/lib/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/UI/lib/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/lib/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/UI/lib/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dist/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/dist/config/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/dist/index.js" afterDir="false" />
-    </list>
+    <list default="true" id="c165d6b3-d9b2-4eaf-84e8-fd62f80f2eb8" name="Changes" comment="solve docker-compose.yml" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -199,7 +186,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744426782884</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="solve docker-compose.yml">
+      <option name="closed" value="true" />
+      <created>1744486243153</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1744486243153</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,7 +219,8 @@
     <MESSAGE value="Init" />
     <MESSAGE value="Init backend" />
     <MESSAGE value="Init front" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init front" />
+    <MESSAGE value="solve docker-compose.yml" />
+    <option name="LAST_COMMIT_MESSAGE" value="solve docker-compose.yml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
