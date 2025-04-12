@@ -2,6 +2,9 @@
 
 ![Clean Architecture](https://blog.cleancoder.com/uncle-bob/images/2012-08-13-the-clean-architecture/CleanArchitecture.jpg)
 
+[![Node.js](https://img.shields.io/badge/Node.js-18-green)]()
+[![Next.js](https://img.shields.io/badge/Next.js-14-blue)]()
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue)]()
 ## Table of Contents
 1. [Overview](#overview)
 2. [Features](#features)
