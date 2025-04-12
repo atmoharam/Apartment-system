@@ -4,12 +4,11 @@ import type { ApartmentRepository } from "../../../../domain/repositories/Apartm
 
 export class PostgresApartmentRepository implements ApartmentRepository {
   async findAll(
-    filters?: Partial<Apartment> & { minPrice?: number; maxPrice?: number; benefitIds?: number[] },
+      filters?: Partial<Apartment> & { minPrice?: number; maxPrice?: number; benefitIds?: number[] },
   ): Promise<Apartment[]> {
     let query = `
       SELECT DISTINCT a.* FROM apartment a
     `
-
     // Join with apartment_benefit if filtering by benefits
     if (filters?.benefitIds && filters.benefitIds.length > 0) {
       query += `
@@ -76,8 +75,34 @@ export class PostgresApartmentRepository implements ApartmentRepository {
     query += " ORDER BY a.created_at DESC"
 
     const { rows } = await pool.query(query, values)
+    const apartments = rows.map(this.mapToEntity)
 
-    return rows.map(this.mapToEntity)
+    for (const apartment of apartments) {
+      if(apartment && apartment.id){
+        apartment.benefits = await this.getBenefits(apartment.id)
+      }
+      if (apartment.benefits && apartment.benefits.length > 0) {
+        const { rows: benefitRows } = await pool.query(
+            `SELECT name FROM benefit WHERE id IN (${apartment.benefits.join(",")})`,
+        )
+        apartment.benefitNames = benefitRows.map((row) => row.name)
+      }
+    }
+
+    for (const apartment of apartments) {
+      if (apartment.neighborhoodId) {
+        const { rows: neighborhoodRows } = await pool.query("SELECT name FROM neighborhood WHERE id = $1", [
+          apartment.neighborhoodId,
+        ])
+        if (neighborhoodRows.length > 0) {
+          apartment.neighborhoodName = neighborhoodRows[0].name
+        }
+      }
+    }
+
+
+
+      return apartments
   }
 
   async findById(id: number): Promise<Apartment | null> {
@@ -92,6 +117,49 @@ export class PostgresApartmentRepository implements ApartmentRepository {
     // Get benefits
     apartment.benefits = await this.getBenefits(id)
 
+    // Get city name
+    if (apartment.cityId) {
+      const { rows: cityRows } = await pool.query("SELECT name FROM city WHERE id = $1", [apartment.cityId])
+      if (cityRows.length > 0) {
+        apartment.cityName = cityRows[0].name
+      }
+    }
+
+    // Get neighborhood name
+    if (apartment.neighborhoodId) {
+      const { rows: neighborhoodRows } = await pool.query("SELECT name FROM neighborhood WHERE id = $1", [
+        apartment.neighborhoodId,
+      ])
+      if (neighborhoodRows.length > 0) {
+        apartment.neighborhoodName = neighborhoodRows[0].name
+      }
+    }
+
+    // Get benefit names
+    if (apartment.benefits && apartment.benefits.length > 0) {
+      const { rows: benefitRows } = await pool.query(
+          `SELECT name FROM benefit WHERE id IN (${apartment.benefits.join(",")})`,
+      )
+      apartment.benefitNames = benefitRows.map((row) => row.name)
+    }
+
+    // Get publisher info if available
+    if (apartment.publisherId) {
+      const { rows: publisherRows } = await pool.query(
+          "SELECT id, name, email, phone_number, created_at FROM publisher WHERE id = $1",
+          [apartment.publisherId],
+      )
+      if (publisherRows.length > 0) {
+        apartment.publisher = {
+          id: publisherRows[0].id,
+          name: publisherRows[0].name,
+          email: publisherRows[0].email,
+          phoneNumber: publisherRows[0].phone_number,
+          createdAt: publisherRows[0].created_at,
+        }
+      }
+    }
+
     return apartment
   }
 
@@ -102,34 +170,34 @@ export class PostgresApartmentRepository implements ApartmentRepository {
       await client.query("BEGIN")
 
       const { rows } = await client.query(
-        `INSERT INTO apartment(
+          `INSERT INTO apartment(
           name, owner_company, status, type, price, rooms_count, bathrooms_count, 
           size, photo_urls, street_name, building_number, zip_code, 
           latitude, longitude, header_description, description, 
           publisher_id, city_id, neighborhood_id
         ) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19)
         RETURNING *`,
-        [
-          apartment.name,
-          apartment.ownerCompany,
-          apartment.status,
-          apartment.type,
-          apartment.price,
-          apartment.roomsCount,
-          apartment.bathroomsCount,
-          apartment.size,
-          apartment.photoUrls,
-          apartment.streetName,
-          apartment.buildingNumber,
-          apartment.zipCode,
-          apartment.latitude,
-          apartment.longitude,
-          apartment.headerDescription,
-          apartment.description,
-          apartment.publisherId,
-          apartment.cityId,
-          apartment.neighborhoodId,
-        ],
+          [
+            apartment.name,
+            apartment.ownerCompany,
+            apartment.status,
+            apartment.type,
+            apartment.price,
+            apartment.roomsCount,
+            apartment.bathroomsCount,
+            apartment.size,
+            apartment.photoUrls,
+            apartment.streetName,
+            apartment.buildingNumber,
+            apartment.zipCode,
+            apartment.latitude,
+            apartment.longitude,
+            apartment.headerDescription,
+            apartment.description,
+            apartment.publisherId,
+            apartment.cityId,
+            apartment.neighborhoodId,
+          ],
       )
 
       const newApartment = this.mapToEntity(rows[0])
@@ -145,6 +213,27 @@ export class PostgresApartmentRepository implements ApartmentRepository {
       }
 
       await client.query("COMMIT")
+
+      // Get city name
+      if (newApartment.cityId) {
+        const { rows: cityRows } = await pool.query("SELECT name FROM city WHERE id = $1", [newApartment.cityId])
+        if (cityRows.length > 0) {
+          newApartment.cityName = cityRows[0].name
+        }
+      }
+
+      // Get neighborhood name
+      if (newApartment.neighborhoodId) {
+        const { rows: neighborhoodRows } = await pool.query("SELECT name FROM neighborhood WHERE id = $1", [
+          newApartment.neighborhoodId,
+        ])
+        if (neighborhoodRows.length > 0) {
+          newApartment.neighborhoodName = neighborhoodRows[0].name
+        }
+      }
+
+      // Set benefits
+      newApartment.benefits = apartment.benefits || []
 
       return newApartment
     } catch (error) {
@@ -167,92 +256,92 @@ export class PostgresApartmentRepository implements ApartmentRepository {
       let paramIndex = 1
 
       if (apartment.name !== undefined) {
-        updates.push(`name = $${paramIndex++}`)
+        updates.push(`name = ${paramIndex++}`)
         values.push(apartment.name)
       }
 
       if (apartment.ownerCompany !== undefined) {
-        updates.push(`owner_company = $${paramIndex++}`)
+        updates.push(`owner_company = ${paramIndex++}`)
         values.push(apartment.ownerCompany)
       }
 
       if (apartment.status !== undefined) {
-        updates.push(`status = $${paramIndex++}`)
+        updates.push(`status = ${paramIndex++}`)
         values.push(apartment.status)
       }
 
       if (apartment.type !== undefined) {
-        updates.push(`type = $${paramIndex++}`)
+        updates.push(`type = ${paramIndex++}`)
         values.push(apartment.type)
       }
 
       if (apartment.roomsCount !== undefined) {
-        updates.push(`rooms_count = $${paramIndex++}`)
+        updates.push(`rooms_count = ${paramIndex++}`)
         values.push(apartment.roomsCount)
       }
 
       if (apartment.bathroomsCount !== undefined) {
-        updates.push(`bathrooms_count = $${paramIndex++}`)
+        updates.push(`bathrooms_count = ${paramIndex++}`)
         values.push(apartment.bathroomsCount)
       }
 
       if (apartment.size !== undefined) {
-        updates.push(`size = $${paramIndex++}`)
+        updates.push(`size = ${paramIndex++}`)
         values.push(apartment.size)
       }
 
       if (apartment.photoUrls !== undefined) {
-        updates.push(`photo_urls = $${paramIndex++}`)
+        updates.push(`photo_urls = ${paramIndex++}`)
         values.push(apartment.photoUrls)
       }
 
       if (apartment.streetName !== undefined) {
-        updates.push(`street_name = $${paramIndex++}`)
+        updates.push(`street_name = ${paramIndex++}`)
         values.push(apartment.streetName)
       }
 
       if (apartment.buildingNumber !== undefined) {
-        updates.push(`building_number = $${paramIndex++}`)
+        updates.push(`building_number = ${paramIndex++}`)
         values.push(apartment.buildingNumber)
       }
 
       if (apartment.zipCode !== undefined) {
-        updates.push(`zip_code = $${paramIndex++}`)
+        updates.push(`zip_code = ${paramIndex++}`)
         values.push(apartment.zipCode)
       }
 
       if (apartment.latitude !== undefined) {
-        updates.push(`latitude = $${paramIndex++}`)
+        updates.push(`latitude = ${paramIndex++}`)
         values.push(apartment.latitude)
       }
 
       if (apartment.longitude !== undefined) {
-        updates.push(`longitude = $${paramIndex++}`)
+        updates.push(`longitude = ${paramIndex++}`)
         values.push(apartment.longitude)
       }
 
       if (apartment.headerDescription !== undefined) {
-        updates.push(`header_description = $${paramIndex++}`)
+        updates.push(`header_description = ${paramIndex++}`)
         values.push(apartment.headerDescription)
       }
 
       if (apartment.description !== undefined) {
-        updates.push(`description = $${paramIndex++}`)
+        updates.push(`description = ${paramIndex++}`)
         values.push(apartment.description)
       }
 
       if (apartment.publisherId !== undefined) {
-        updates.push(`publisher_id = $${paramIndex++}`)
+        updates.push(`publisher_id = ${paramIndex++}`)
         values.push(apartment.publisherId)
       }
 
       if (apartment.cityId !== undefined) {
-        updates.push(`city_id = $${paramIndex++}`)
+        updates.push(`city_id = ${paramIndex++}`)
         values.push(apartment.cityId)
       }
 
       if (apartment.neighborhoodId !== undefined) {
-        updates.push(`neighborhood_id = $${paramIndex++}`)
+        updates.push(`neighborhood_id = ${paramIndex++}`)
         values.push(apartment.neighborhoodId)
       }
 
@@ -263,8 +352,8 @@ export class PostgresApartmentRepository implements ApartmentRepository {
       values.push(id)
 
       const { rows } = await client.query(
-        `UPDATE apartment SET ${updates.join(", ")} WHERE id = $${paramIndex} RETURNING *`,
-        values,
+          `UPDATE apartment SET ${updates.join(", ")} WHERE id = ${paramIndex} RETURNING *`,
+          values,
       )
 
       if (rows.length === 0) {
@@ -285,7 +374,8 @@ export class PostgresApartmentRepository implements ApartmentRepository {
 
       await client.query("COMMIT")
 
-      return this.mapToEntity(rows[0])
+      // Return the updated apartment with all details
+      return this.findById(id)
     } catch (error) {
       await client.query("ROLLBACK")
       throw error
@@ -308,13 +398,8 @@ export class PostgresApartmentRepository implements ApartmentRepository {
 
       await client.query("COMMIT")
 
-      if(rowCount && rowCount > 0){
-        return true;
-      }
-      else{
-        return false;
-      }
-
+      if(rowCount && rowCount > 0){return true}
+      else{return false}
     } catch (error) {
       await client.query("ROLLBACK")
       throw error
@@ -326,8 +411,8 @@ export class PostgresApartmentRepository implements ApartmentRepository {
   async addBenefit(apartmentId: number, benefitId: number): Promise<boolean> {
     try {
       await pool.query(
-        "INSERT INTO apartment_benefit(apartment_id, benefit_id) VALUES($1, $2) ON CONFLICT DO NOTHING",
-        [apartmentId, benefitId],
+          "INSERT INTO apartment_benefit(apartment_id, benefit_id) VALUES($1, $2) ON CONFLICT DO NOTHING",
+          [apartmentId, benefitId],
       )
       return true
     } catch (error) {
@@ -340,12 +425,8 @@ export class PostgresApartmentRepository implements ApartmentRepository {
       apartmentId,
       benefitId,
     ])
-    if(rowCount && rowCount > 0){
-      return true;
-    }
-    else{
-      return false;
-    }
+    if(rowCount && rowCount > 0){return true}
+    else{return false}
   }
 
   async getBenefits(apartmentId: number): Promise<number[]> {

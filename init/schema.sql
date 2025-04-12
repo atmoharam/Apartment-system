@@ -79,9 +79,9 @@ CREATE INDEX idx_apartment_price ON apartment(price);
 
 -- Sample data
 INSERT INTO city(name) VALUES
-                           ('Cairo Governorate'),('Alexandria Governorate'),('Giza Governorate'),
-                           ('Qalyubia Governorate'),('Luxor Governorate'),('Dakahlia Governorate'),
-                           ('Gharbia Governorate'),('Asyut Governorate'),('Sohag Governorate');
+        ('Cairo Governorate'),('Alexandria Governorate'),('Giza Governorate'),
+        ('Qalyubia Governorate'),('Luxor Governorate'),('Dakahlia Governorate'),
+        ('Gharbia Governorate'),('Asyut Governorate'),('Sohag Governorate');
 
 INSERT INTO neighborhood(name, city_id) VALUES
                                             ('Abbassia',1),('Ain Shams',1),('Bab al-Louq',1),

@@ -8,9 +8,17 @@ import { neighborhoodRoutes } from "./interfaces/routes/neighborhoodRoutes"
 import { benefitRoutes } from "./interfaces/routes/benefitRoutes"
 
 const app = express()
+const corsOptions = {
+  origin: [
+    'http://localhost:3001',    // Local frontend
+    'http://frontend:3001',     // Docker frontend
+    // Add other origins as needed
+  ],
+  credentials: true
+};
 
 // Middleware
-app.use(cors())
+app.use(cors(corsOptions))
 app.use(express.json())
 
 // Routes

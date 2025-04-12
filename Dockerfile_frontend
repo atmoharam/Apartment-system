@@ -1,0 +1,11 @@
+FROM node:18
+
+WORKDIR /app
+
+COPY UI/package*.json ./
+RUN npm install
+
+COPY UI .
+
+EXPOSE 3001
+CMD ["npm", "run", "dev", "--", "-p", "3001"]

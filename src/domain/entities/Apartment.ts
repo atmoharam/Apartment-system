@@ -15,7 +15,7 @@ export interface Apartment {
   ownerCompany: string
   status: ApartmentStatus
   type: ApartmentType
-  price: number // Added price field
+  price: number
   roomsCount: number
   bathroomsCount: number
   size: number
@@ -32,4 +32,16 @@ export interface Apartment {
   neighborhoodId?: number
   createdAt?: Date
   benefits?: number[]
+
+  // Additional fields from joins
+  cityName?: string
+  neighborhoodName?: string
+  benefitNames?: string[]
+  publisher?: {
+    id: number
+    name: string
+    email: string
+    phoneNumber?: string
+    createdAt?: Date
+  }
 }

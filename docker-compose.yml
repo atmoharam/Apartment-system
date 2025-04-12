@@ -15,7 +15,7 @@ services:
       - postgres_data:/var/lib/postgresql/data
       - ./init/schema.sql:/docker-entrypoint-initdb.d/init.sql
     networks:
-      - postgres_network
+      - realestate_network
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres -d realestate"]
       interval: 5s
@@ -24,8 +24,8 @@ services:
 
   backend:
     build:
-      context: .               # Points to root directory
-      dockerfile: Dockerfile    # Uses the Dockerfile in root
+      context: .
+      dockerfile: Dockerfile_backend
     container_name: realestate-backend
     depends_on:
       postgres:
@@ -40,14 +40,36 @@ services:
       DB_NAME: realestate
       NODE_ENV: development
     volumes:
-      - ./src:/app             # Maps local src to container /app
-      - /app/node_modules      # Preserves container modules
+      - ./src:/app
+      - /app/node_modules
     networks:
-      - postgres_network
+      - realestate_network
     restart: unless-stopped
+    
+    
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile_frontend
+    container_name: realestate-frontend
+    ports:
+      - "3001:3001"
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:3000/api  # For Docker-to-Docker communication
+      NEXT_PUBLIC_API_URL_LOCAL: http://localhost:3000/api  # For local development
+      PORT: 3001
+    volumes:
+      - ./UI:/app
+      - /app/node_modules
+      - /app/.next
+    networks:
+      - realestate_network
+    restart: unless-stopped
+    depends_on:
+      - backend
 
 networks:
-  postgres_network:
+  realestate_network:
     driver: bridge
 
 volumes:
