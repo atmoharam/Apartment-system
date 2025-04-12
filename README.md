@@ -79,7 +79,6 @@ Complete Postman documentation:
 
 ## Installation <a name="installation"></a>
 ```bash
-git clone[ https://github.com/your-repo/apartment-listings.git](https://github.com/atmoharam/Apartment-system)
-cd apartment-listings
-cp .env.example .env
+git clone [https://github.com/your-repo/Apartment-system.git](https://github.com/atmoharam/Apartment-system)
+cd Apartment-system
 docker-compose up --build
