@@ -81,6 +81,6 @@ Complete Postman documentation:
 ![UI of Apartment Details](./assets/apartment-details.PNG)
 ## Installation <a name="installation"></a>
 ```bash
-git clone [https://github.com/your-repo/Apartment-system.git](https://github.com/atmoharam/Apartment-system)
+git clone (https://github.com/atmoharam/Apartment-system)
 cd Apartment-system
 docker-compose up --build
