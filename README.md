@@ -14,6 +14,8 @@
 6. [API Documentation](#api-documentation)
 7. [Screenshots](#screen-shots)
 8. [Installation](#installation)
+9. [Enhancement](#enhancement)
+10. [Future Work](#future-work)
 
 ## Overview <a name="overview"></a>
 A modern apartment listings platform built with Clean Architecture principles, featuring:
@@ -57,6 +59,7 @@ Key principles implemented:
 ### Infrastructure
 - Docker
 - Docker Compose
+- pm2 to manage applications
 - Postman (API testing)
 
 ## Database Schema <a name="database-schema"></a>
@@ -84,3 +87,15 @@ Complete Postman documentation:
 git clone (https://github.com/atmoharam/Apartment-system)
 cd Apartment-system
 docker-compose up --build
+
+## Enhancement <a name="enhancement"></a>
+- Pagination: Implement pagination to improve user experience and performance.
+- Caching: Use caching mechanisms to reduce server load and speed up response times.
+
+## Future Work <a name="future-work"></a>
+- Authentication System: Develop a secure user authentication system.
+- Seller Reports: Create reports for sellers to track their apartment listings.
+- Real-Time View Counter: Display the number of views for each ad in real-time.
+- Ad Posting Limits: Restrict the number of ads a user can post per day to prevent spam.
+- IP Limit Filter: Implement IP-based rate limiting to protect against attacks.
+
