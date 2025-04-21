@@ -6,29 +6,6 @@ This document provides a detailed overview of the architecture of the Apartment 
 
 The Apartment Listings Platform follows the principles of Clean Architecture, which promotes separation of concerns and dependency inversion. The architecture is organized into concentric layers, with dependencies pointing inward.
 
-```
-┌────────────────────────────────────────────────────────────────┐
-│                                                                │
-│  ┌──────────────────────────────────────────────────────────┐  │
-│  │                                                          │  │
-│  │  ┌──────────────────────────────────────────────────┐   │  │
-│  │  │                                                  │   │  │
-│  │  │  ┌──────────────────────────────────────────┐   │   │  │
-│  │  │  │                                          │   │   │  │
-│  │  │  │           Domain Layer                   │   │   │  │
-│  │  │  │                                          │   │   │  │
-│  │  │  └──────────────────────────────────────────┘   │   │  │
-│  │  │                Application Layer                 │   │  │
-│  │  │                                                  │   │  │
-│  │  └──────────────────────────────────────────────────┘   │  │
-│  │                    Interface Layer                       │  │
-│  │                                                          │  │
-│  └──────────────────────────────────────────────────────────┘  │
-│                      Frameworks Layer                           │
-│                                                                │
-└────────────────────────────────────────────────────────────────┘
-```
-
 ## Layers
 
 ### 1. Domain Layer
