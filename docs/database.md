@@ -7,49 +7,8 @@ This document provides detailed information about the database schema used in th
 The Apartment Listings Platform uses PostgreSQL as its primary database. The schema is designed to support the core functionality of listing and searching for apartments, with related entities such as cities, neighborhoods, publishers, and benefits.
 
 ## Entity Relationship Diagram
+![Database Schema](.././assets/apartment.png)
 
-```
-┌─────────────┐       ┌───────────────┐       ┌────────────────┐
-│    city     │       │ neighborhood  │       │   publisher    │
-├─────────────┤       ├───────────────┤       ├────────────────┤
-│ id          │       │ id            │       │ id             │
-│ name        │◄──────┤ city_id       │       │ name           │
-└─────────────┘       │ name          │       │ email          │
-                      └───────────────┘       │ phone_number   │
-                                              │ created_at      │
-                                              └────────┬───────┘
-                                                       │
-┌─────────────┐       ┌───────────────┐               │
-│   benefit   │       │ apartment_    │               │
-├─────────────┤       │   benefit     │               │
-│ id          │       ├───────────────┤               │
-│ name        │◄──────┤ apartment_id  │       ┌───────┴────────┐
-└─────────────┘       │ benefit_id    │       │   apartment    │
-                      └──────┬────────┘       ├────────────────┤
-                             │                │ id             │
-                             │                │ name           │
-                             └───────────────►│ owner_company  │
-                                              │ status         │
-                                              │ type           │
-                                              │ price          │
-                                              │ rooms_count    │
-                                              │ bathrooms_count│
-                                              │ size           │
-                                              │ photo_urls     │
-                                              │ street_name    │
-                                              │ building_number│
-                                              │ zip_code       │
-                                              │ latitude       │
-                                              │ longitude      │
-                                              │ header_desc    │
-                                              │ description    │
-                                              │ publisher_id   │◄─┐
-                                              │ city_id        │◄─┘
-                                              │ neighborhood_id│◄─┐
-                                              │ created_at     │  │
-                                              └────────────────┘  │
-                                                                  │
-```
 
 ## Tables
 
