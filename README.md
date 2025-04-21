@@ -35,6 +35,11 @@ A modern apartment listings platform built with Clean Architecture principles, f
 ## Clean Architecture <a name="clean-architecture"></a>
 This project follows **Clean Architecture** principles with clear separation of concerns:
 
+1. **Domain Layer** - Contains business entities and logic
+2. **Application Layer** - Contains use cases that orchestrate the flow of data
+3. **Interface Layer** - Contains controllers and presenters
+4. **Frameworks Layer** - Contains database implementations, web frameworks, etc.
+
 
 
 Key principles implemented:
@@ -98,4 +103,3 @@ docker-compose up --build
 - Real-Time View Counter: Display the number of views for each ad in real-time.
 - Ad Posting Limits: Restrict the number of ads a user can post per day to prevent spam.
 - IP Limit Filter: Implement IP-based rate limiting to protect against attacks.
-
