@@ -8,9 +8,7 @@ export default async function ApartmentPage({ params }:
     const apartmentId =await Number.parseInt(id)
     let  apartment = null;
     if(apartmentId){
-        await console.log("From Apartment Page : " , id)
         apartment = await getApartmentById(apartmentId)
-        await console.log("From Apartment Page response is : " , apartment)
     }
 
   if (!apartment) {

@@ -18,11 +18,11 @@ CREATE TABLE neighborhood (
 
 -- Publishers
 CREATE TABLE publisher (
-                           id SERIAL PRIMARY KEY,
-                           name VARCHAR(100) NOT NULL,
-                           email VARCHAR(100) UNIQUE NOT NULL,
-                           phone_number VARCHAR(20),
-                           created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                id SERIAL PRIMARY KEY,
+                name VARCHAR(100) NOT NULL,
+                email VARCHAR(100) UNIQUE NOT NULL,
+                 phone_number VARCHAR(20),
+                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 -- Benefits

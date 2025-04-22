@@ -4,67 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c165d6b3-d9b2-4eaf-84e8-fd62f80f2eb8" name="Changes" comment="upload assets">
-      <change afterPath="$PROJECT_DIR$/src/application/use-cases/benefits/GetAllBenefitsUseCase.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/use-cases/benefits/GetBenefitByIdUseCase.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/use-cases/city/FindAllCitiesUseCase.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/use-cases/city/FindCityByIdUseCase.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/use-cases/neighborhoods/CreateNeighborhoodUseCase.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/use-cases/neighborhoods/DeleteNeighborhoodUseCase.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/use-cases/neighborhoods/GetAllNeighborhoodsUseCase.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/use-cases/neighborhoods/GetNeighborhoodByIdUseCase.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/use-cases/neighborhoods/UpdateNeighborhoodUseCase.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/use-cases/publisher/CreatePublisherUseCase.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/use-cases/publisher/GetAllPublishersUseCase.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/use-cases/publisher/GetPublisherByIdUseCase.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/use-cases/publisher/UpdatePublisherUseCase.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/controllers/BenefitController.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/controllers/CityController.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/controllers/PublisherController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/465af931-eada-497c-a0a0-aaa7f8fb1717.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/465af931-eada-497c-a0a0-aaa7f8fb1717.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_11_2025_10_27_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_11_2025_10_27_PM__Changes_.xml" beforeDir="false" />
+    <list default="true" id="c165d6b3-d9b2-4eaf-84e8-fd62f80f2eb8" name="Changes" comment="some refactoring">
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_12_2025_9_42_PM_[Changes]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_12_2025_9_42_PM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/app/apartments/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/UI/app/apartments/[id]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/components/apartment-listings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/UI/components/apartment-listings.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/lib/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/UI/lib/api.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/init/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/init/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/use-cases/apartment/CreateApartmentUseCase.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/use-cases/apartment/CreateApartmentUseCase.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dist/application/use-cases/apartment/CreateApartmentUseCase.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dist/application/use-cases/apartment/DeleteApartmentUseCase.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dist/application/use-cases/apartment/GetApartmentByIdUseCase.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dist/application/use-cases/apartment/GetApartmentsUseCase.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dist/application/use-cases/apartment/UpdateApartmentUseCase.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dist/config/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dist/domain/entities/Apartment.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dist/domain/entities/Benefit.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dist/domain/entities/City.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dist/domain/entities/Neighborhood.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dist/domain/entities/Publisher.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dist/domain/repositories/ApartmentRepository.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dist/domain/repositories/BenefitRepository.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dist/domain/repositories/CityRepository.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dist/domain/repositories/NeighborhoodRepository.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dist/domain/repositories/PublisherRepository.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dist/frameworks/database/postgres/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dist/frameworks/database/postgres/repositories/PostgresApartmentRepository.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dist/frameworks/database/postgres/repositories/PostgresBenefitRepository.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dist/frameworks/database/postgres/repositories/PostgresCityRepository.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dist/frameworks/database/postgres/repositories/PostgresNeighborhoodRepository.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dist/frameworks/database/postgres/repositories/PostgresPublisherRepository.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dist/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dist/interfaces/controllers/ApartmentController.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dist/interfaces/routes/apartmentRoutes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dist/interfaces/routes/benefitRoutes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dist/interfaces/routes/cityRoutes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dist/interfaces/routes/neighborhoodRoutes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dist/interfaces/routes/publisherRoutes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/controllers/ApartmentController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/controllers/ApartmentController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/routes/apartmentRoutes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/routes/apartmentRoutes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/routes/benefitRoutes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/routes/benefitRoutes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/routes/cityRoutes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/routes/cityRoutes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/routes/neighborhoodRoutes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/routes/neighborhoodRoutes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/routes/publisherRoutes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/routes/publisherRoutes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,35 +59,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Docker.docker-compose.yml.backend: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml.db: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml.postgres: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "js.last.introduce.type": "VAR",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "F:/Apartment-system/assets",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.General",
-    "ts.external.directory.path": "F:\\Apartment-system\\src\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Docker.docker-compose.yml.backend: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.db: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.postgres: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;js.last.introduce.type&quot;: &quot;VAR&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Apartment-system/assets&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.General&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;F:\\Apartment-system\\src\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\Apartment-system\assets" />
@@ -245,7 +193,9 @@
       <workItem from="1744412534973" duration="14155000" />
       <workItem from="1744465903627" duration="5303000" />
       <workItem from="1745234797752" duration="486000" />
-      <workItem from="1745235582057" duration="10451000" />
+      <workItem from="1745235582057" duration="18645000" />
+      <workItem from="1745271360559" duration="1716000" />
+      <workItem from="1745316925048" duration="4663000" />
     </task>
     <task id="LOCAL-00001" summary="Init front">
       <option name="closed" value="true" />
@@ -287,7 +237,31 @@
       <option name="project" value="LOCAL" />
       <updated>1744488136434</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="some refactoring">
+      <option name="closed" value="true" />
+      <created>1745246241660</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1745246241660</updated>
+    </task>
+    <task id="LOCAL-00007" summary="some refactoring">
+      <option name="closed" value="true" />
+      <created>1745249230130</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1745249230130</updated>
+    </task>
+    <task id="LOCAL-00008" summary="some refactoring">
+      <option name="closed" value="true" />
+      <created>1745250262641</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1745250262641</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,57 +289,7 @@
     <MESSAGE value="solve docker-compose.yml" />
     <MESSAGE value="remove comments for debug" />
     <MESSAGE value="upload assets" />
-    <option name="LAST_COMMIT_MESSAGE" value="upload assets" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/UI/lib/api.ts</url>
-          <line>6</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/UI/lib/api.ts</url>
-          <line>14</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/UI/lib/api.ts</url>
-          <line>7</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/UI/lib/api.ts</url>
-          <line>8</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/UI/lib/api.ts</url>
-          <line>9</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/UI/lib/api.ts</url>
-          <line>10</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/UI/lib/api.ts</url>
-          <line>11</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/UI/lib/api.ts</url>
-          <line>12</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/UI/lib/api.ts</url>
-          <line>13</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="some refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="some refactoring" />
   </component>
 </project>

@@ -12,7 +12,6 @@ const corsOptions = {
   origin: [
     'http://localhost:3001',    // Local frontend
     'http://frontend:3001',     // Docker frontend
-    // Add other origins as needed
   ],
   credentials: true
 };

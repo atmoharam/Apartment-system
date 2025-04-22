@@ -139,31 +139,3 @@ export async function getAllBenefits(): Promise<Benefit[]> {
 export async function getBenefitById(id: number): Promise<Benefit> {
   return fetchAPI<Benefit>(`/benefits/${id}`)
 }
-
-// Get similar properties
-export async function getSimilarProperties(apartmentId: number): Promise<Apartment[]> {
-  try {
-    const apartment = await getApartmentById(apartmentId)
-
-    if (!apartment) {
-      return []
-    }
-
-    // Get apartments with similar characteristics
-    const filters: Record<string, any> = {
-      cityId: apartment.cityId,
-    }
-
-    if (apartment.status) {
-      filters.status = apartment.status
-    }
-
-    const apartments = await getAllApartments(filters)
-
-    // Filter out the current apartment and limit to 2
-    return apartments.filter((apt) => apt.id !== apartmentId).slice(0, 2)
-  } catch (error) {
-    console.error("Error fetching similar properties:", error)
-    return []
-  }
-}
